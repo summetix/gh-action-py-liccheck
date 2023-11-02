@@ -95,10 +95,10 @@ function run() {
             }));
             yield core.group('Installing liccheck...', () => __awaiter(this, void 0, void 0, function* () {
                 yield exec.exec(`"${PythonPath}"`, [
-                    '-m',
                     'pip',
                     'install',
-                    `liccheck==${inputs.liccheckVersion}`,
+		    '-e',
+		    'git+https://github.com/dhatim/python-license-check.git#egg=liccheck',
                 ]);
             }));
             const liccheckPath = yield core.group('Getting liccheck executable path ...', () => __awaiter(this, void 0, void 0, function* () {
