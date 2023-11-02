@@ -1,2 +1,3 @@
 future>=0.17
 pandas
+setuptools==68.2.2
