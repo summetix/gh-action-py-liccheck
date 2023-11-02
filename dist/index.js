@@ -95,7 +95,8 @@ function run() {
             }));
             yield core.group('Installing liccheck...', () => __awaiter(this, void 0, void 0, function* () {
                 yield exec.exec(`"${PythonPath}"`, [
-                    'pip',
+                    '-m',
+		    'pip',
                     'install',
 		    '-e',
 		    'git+https://github.com/dhatim/python-license-check.git#egg=liccheck',
